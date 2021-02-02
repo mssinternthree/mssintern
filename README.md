@@ -8,3 +8,5 @@
 | [Rajesh523](https://github.com/mssinternthree/mssintern/tree/Rajesh523) | Rajesh |
 | [surya](https://github.com/mssinternthree/mssintern/tree/surya) | Surya |
 | [charan](https://github.com/mssinternthree/mssintern/tree/charan) | Charan |
+| [Dinesh](https://github.com/mssinternthree/mssintern/tree/charan) | Dinesh |
+| [anupama](https://github.com/mssinternthree/mssintern/tree/charan) | Anupama |
