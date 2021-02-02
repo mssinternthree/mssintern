@@ -1,0 +1,7 @@
+package leapyear;
+
+import java.util.Scanner;
+
+public class leapYear {
+	
+}

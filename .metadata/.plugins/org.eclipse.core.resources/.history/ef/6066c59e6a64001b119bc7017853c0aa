@@ -1,0 +1,27 @@
+package number;
+
+public class number {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// number to be check 
+        int firstNumber = 912; 
+        System.out.println(firstNumber + " is " + checkPosNeg(firstNumber)); 
+	}
+	
+	  // Function to check positive and negative 
+    static String checkPosNeg(int x) 
+    { 
+  
+        // checks the number is greater than 0 or not 
+        if (x > 0) 
+            return "Positive"; 
+  
+        else if (x < 0) 
+            return "Negative"; 
+  
+        else
+            return "zero"; 
+    } 
+  
+}
