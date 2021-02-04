@@ -6,17 +6,14 @@ public class WordInAlpha {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("enter string");
 		String s1=scan.nextLine();
-		String[] words=s1.split(" ");
-		Arrays.sort(words);
+		char[] cha= s1.toCharArray();
+		Arrays.sort(cha);
 		System.out.println("alphabetical order");
-		for(int i=0;i<words.length;i++) {
-			System.out.print(words[i]+" ");
+		for(int i=0;i<cha.length;i++) {
+			if(cha[i]!=' ')
+			System.out.print(cha[i]+" ");
 		}
-		System.out.println(" ");
-		System.out.println("reverse order");
-		for(int i=words.length-1;i>=0;i--) {
-			System.out.print(words[i]+" ");
-		}
+		
 	}
 
 }
