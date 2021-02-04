@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class AlphabeticSort {
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		
+		System.out.println("Enter First String : ");
+		String stringInput=in.nextLine();
+		char charArray[] = stringInput.toCharArray();
+		
+		char temp;
+		for(int i=0;i<stringInput.length();i++) {
+			for (int j=i+1;j<stringInput.length();j++) {
+				if(charArray[i]>charArray[j]) {
+					temp=charArray[i];
+					charArray[i]=charArray[j];
+					charArray[j]=temp;
+				}
+			}
+		}
+		String[] StringArray=new String[charArray.length];
+		for(int i=0;i<charArray.length;i++) {
+			StringArray[i]=String.valueOf(charArray[i]);
+		}
+		String joinedString = String.join("", StringArray);
+		System.out.println("Sorted String : "+joinedString);
+		
+	}
+}
