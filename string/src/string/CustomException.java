@@ -2,7 +2,7 @@ package string;
 
 import java.util.Scanner;
 
-public class CustomException extends MyException {
+public class CustomException extends MyExceptions {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -13,12 +13,12 @@ public class CustomException extends MyException {
 		int withdraw = sc.nextInt();
 		try {
 			if (withdraw > mainbalance) {
-				throw new MyException();
+				throw new MyExceptions();
 			} else {
 				System.out.println("Withdraw is successful !");
 			}
 
-		} catch (MyException e) {
+		} catch (MyExceptions e) {
 			System.out.println("Withdraw is not possible ! ");
 		}
 		finally{
@@ -28,8 +28,8 @@ public class CustomException extends MyException {
 
 }
 
-class MyException extends Exception {
-	public MyException() {
+class MyExceptions extends Exception {
+	public MyExceptions() {
 		System.out.println("This is a exception !!!");
 	}
 }
