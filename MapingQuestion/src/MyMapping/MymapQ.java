@@ -43,8 +43,6 @@ public class MymapQ {
 			Map.Entry entrymap = (Map.Entry) itrmap1.next();
 			@SuppressWarnings("rawtypes")
 			Map.Entry entryop = (Map.Entry) itrop.next();
-			@SuppressWarnings("rawtypes")
-			Map.Entry entry3 = (Map.Entry) itr3.next();
 			System.out.println(entrymap.getKey() + " " + entrymap.getValue());
 			System.out.println(entryop.getValue());
 			System.out.println("Enter the answer");

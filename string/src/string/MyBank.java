@@ -30,6 +30,7 @@ public class MyBank extends Myexcep{
 		String name = "surya";
 		String myname;
 		while (counter < 3) {
+			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
 			System.out.printf("Enter name : ");
 			myname = sc.nextLine();
