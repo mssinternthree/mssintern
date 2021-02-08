@@ -10,6 +10,7 @@ public class collectionexample {
 		list.add("teja");
 		list.add("Tarun");
 		list.add("Sai");
+		list.add("hello");
 		Iterator<String> itr = list.iterator();
 		while (itr.hasNext()) {
 			System.out.println(itr.next());
