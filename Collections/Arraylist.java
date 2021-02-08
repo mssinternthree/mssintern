@@ -10,6 +10,7 @@ public class Arraylist {
 	    ArrayList obj2=new ArrayList();
 	    obj2.addAll(obj);
 	    System.out.println(obj2);
+	    System.out.printl("  ");
 
 	    obj2.add(5);
 	    obj2.add(9);
