@@ -9,7 +9,7 @@
 | 5 | [Surya](https://github.com/mssinternthree/mssintern/tree/surya) | Surya |
 | 6 | [Pavan](https://github.com/mssinternthree/mssintern/tree/Pavan) | Pavan |
 | 7 | [Charan](https://github.com/mssinternthree/mssintern/tree/charan) | Charan |
-| 8 | [Dinesh](https://github.com/mssinternthree/mssintern/tree/charan) | Dinesh |
-| 9 | [Anupama](https://github.com/mssinternthree/mssintern/tree/charan) | Anupama |
+| 8 | [Dinesh](https://github.com/mssinternthree/mssintern/tree/dinesh) | Dinesh |
+| 9 | [Anupama](https://github.com/mssinternthree/mssintern/tree/anupama) | Anupama |
 | 10 | [Sai_Kumar](https://github.com/mssinternthree/mssintern/tree/Sai_Kumar) | Sai_Kumar |
 | 11 | [Saradhi](https://github.com/mssinternthree/mssintern/tree/saradhi) | Saradhi |
