@@ -8,7 +8,7 @@ public class intern {
     	try {
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mss","root","root");
 			PreparedStatement ps1=con.prepareStatement("insert into intern values(3,'Dhileep')");
-		   int result= ps1.executeUpdate();
+			int result= ps1.executeUpdate();
 			System.out.println(result);
 			if(result>0)
 			{

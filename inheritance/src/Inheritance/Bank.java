@@ -12,9 +12,9 @@ class ATM extends Exception
 	  
 }
  public class Bank {
-	 static void deposite(int total)throws ATM
+	 static int deposite(int total)throws ATM
 	  {
-		 int balance=1000,amount=0;
+		 int balance=1000,amount=0;s
 		  Scanner obj1=new Scanner(System.in);
 		  System.out.println("Enter Amount to deposite: ");
 		   
@@ -39,9 +39,10 @@ class ATM extends Exception
 	    {
 		  System.out.println(a);
 	    }
+		return total;
 		
 	  }
-		  static void withdrawl(int total)throws ATM
+		  static int withdrawl(int total)throws ATM
 		  {
 			 int withd=0;
 			  Scanner obj2=new Scanner(System.in);
@@ -64,6 +65,7 @@ class ATM extends Exception
 		    {
 			  System.out.println(a);
 		    }
+			return total;
 	  }
 		  static void BalanceEnquiry(int total)
 		  {
@@ -102,7 +104,7 @@ class ATM extends Exception
                         		if(n==1)
                         		{
                         		    try{
-                        		    deposite(total);
+                        		   total= deposite(total);
                         		  	  
                         		    }
                         		    catch (ATM e){
@@ -112,7 +114,7 @@ class ATM extends Exception
                         		    else if(n==2)
                         		    {
                         		    	try {
-                        		    		withdrawl(total);
+                        		    		total=withdrawl(total);
                         		    		
                         		    	    }
                         		    	catch (ATM e){
