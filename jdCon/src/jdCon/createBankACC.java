@@ -6,9 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class createBankACC {
+import org.apache.log4j.Logger;
 
+import org.apache.log4j.Logger; 
+public class createBankACC {
+	static Logger log = Logger.getLogger(createBankACC.class.getName()); 
 	public static void main(String[] args) {
+		  
 		int loop=1;
 		while(loop==1) {
 			Scanner scan = new Scanner(System.in);
