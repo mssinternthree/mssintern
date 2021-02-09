@@ -9,9 +9,9 @@ public class mapCreation {
     	Map<Integer, String> m1=new HashMap();
     	Map<Integer , String> m2=new HashMap();
     	Map<Integer , String> m3=new HashMap();
-    	m1.put(1,": who is vennela\nA.  Nibba\nB.  Sompapidi\nC.  Karpuram\nD.  All of the Above\n");
-    	 m1.put(2,": Number one nibba in our class\nA.  Sagar\nB.  Sirish\nC.  Swarna\nD.  All of the Above\n ");
-       m1.put(3,": Lazar has _____ girlfriends\nA.  Uncountable\nB.  7\nC.  9\nD.  19");
+    	m1.put(1,": 'Rhythm of eyes' city name in India?\nA.  Chennei\nB.  Srinagar\nC.  Karnataka\nD. Nainital\n");
+    	 m1.put(2,": What has teeth but cannot bite?\nA.  Zipper\nB.  Gear\nC.  Saw\nD. Comb\n ");
+       m1.put(3,": Poor people have it.\n    Rich people need it.\n    If you eat it you die.\nA.  Nothing\nB.  Brain\nC.  Money\nD.  Luxury Items");
        
         
          for(Map.Entry<Integer,String> m : m1.entrySet()) 
