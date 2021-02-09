@@ -6,10 +6,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class EmpJd {
+import org.apache.log4j.Logger;
 
+public class EmpJd {
+	static Logger log = Logger.getLogger(EmpJd.class.getName());
 	public static void main(String[] args) {
-	
+		log.info("_____________________________"); 
+		log.info("________EMP Log open_______"); 
 	int i=1;
 	while(i==1) {
 		System.out.print("select the below options \n1)Register New Employee\n2)Fetch employees details");
@@ -31,15 +34,16 @@ public class EmpJd {
 				ps.setString(2,elname);
 				ResultSet rs = ps.executeQuery();
 				while (rs.next()) {
-					System.out.println("Employee FirstName:-"+rs.getString(1));
-					System.out.println("Employee lastName:-"+rs.getString(2));
-					System.out.println("Employee Salary:-"+rs.getInt(3));
+					System.out.println("Employee FirstName: "+rs.getString(1));
+					System.out.println("Employee lastName: "+rs.getString(2));
+					System.out.println("Employee Salary: "+rs.getInt(3));
 				}
 				i=0;
 			}catch (java.sql.SQLIntegrityConstraintViolationException e) {
+				log.error("Voilated Values"); 
 				System.out.println("check values");
 			}catch (SQLException e) {
-				
+				log.error(e); 
 				e.printStackTrace();
 			}
 			
@@ -68,7 +72,7 @@ public class EmpJd {
 				con.close();
 				System.out.println("connection successfull");
 				if(isupdate==1) {
-					
+					log.info("Account created successfully for "+efname); 
 					System.out.println("Account created successfully");
 					System.out.println("Want to see menu again 1)yes2)No");
 					
@@ -82,16 +86,20 @@ public class EmpJd {
 				else
 					System.out.println("not done");
 			} catch (java.sql.SQLIntegrityConstraintViolationException e) {
+				log.error("user exist"+efname); 
 				System.out.println("username already exists enter new user name");
 			}catch (SQLException e) {
 				
 				e.printStackTrace();
 			}
 		}else {
+			log.warn("invalid option"); 
 			System.out.print("Invalid Option");
 			i=0;
 		}
 		System.out.print("Thank you");
+		log.info("_____________________________"); 
+		log.info("________EMP Log Close_______");
 	}
 
 	}

@@ -1,0 +1,3 @@
+[main] DEBUG jdCon.LogExample  - Hello this is a debug message
+  [main] INFO  jdCon.LogExample  - Hello this is an info message
+  
