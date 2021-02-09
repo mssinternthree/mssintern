@@ -33,7 +33,7 @@ public class Bank_DB {
 			 while(rs.next()) {
 				 dbbal=rs.getInt(4);
 			 }
-			System.out.println("Enter your choice :\n1.Withdraw\n2.Deposit\n3.Show Balance\n4.Transfer\n5.Exit");
+			System.out.println("Enter your choice - \n1.Withdraw\n2.Deposit\n3.Show Balance\n4.Transfer\n5.Exit");
 			tranchoice=sc.nextInt();
 			
 			switch(tranchoice) {

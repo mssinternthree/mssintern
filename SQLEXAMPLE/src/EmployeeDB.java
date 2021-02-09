@@ -114,7 +114,7 @@ public class EmployeeDB {
 									break;
 							default : System.out.println("Invalid option !");
 						}
-						log.info("Employee updated with id "+empid);
+						log.info("Employee updated with id : "+empid);
 						break;
 				
 				case 4:	System.out.println("Enter First name to Update : ");
