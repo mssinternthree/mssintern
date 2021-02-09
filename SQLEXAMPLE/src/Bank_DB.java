@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import org.apache.log4j.Logger;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,6 +12,7 @@ class UserException extends Exception{
 }
 public class Bank_DB {
 	int amount;
+	static Logger log = Logger.getLogger(Bank_DB.class.getName());
 	
 	Bank_DB(){
 		amount=10000;
@@ -47,6 +49,7 @@ public class Bank_DB {
 								ps.setInt(2, accid);
 								ps.executeUpdate();
 								System.out.println("Current Balance : "+(dbbal-amount));
+								log.info("Account Id : "+accid+" Withdrew money from the bank, total balance is : "+(dbbal-amount));
 							}
 							
 						}catch(Exception e) {
@@ -64,12 +67,14 @@ public class Bank_DB {
 								ps.setInt(2, accid);
 								ps.executeUpdate();
 								System.out.println("Current Balance : "+(dbbal+amount));
+								log.info("Account Id : "+accid+" Deposited money to his bank, total balance is : "+(dbbal+amount));
 							}
 						}catch(Exception e) {
 							continue loop;
 						}
 						break;
 				case 3:System.out.println("Total balance : "+dbbal);
+						log.info("Account Id : "+accid+" Balance enquiry done, total balance is : "+dbbal);
 						break;
 						
 				case 4:System.out.println("Enter Third party Account id : ");
@@ -99,9 +104,11 @@ public class Bank_DB {
 							ps.executeUpdate();
 							
 							System.out.println("Transfer Complete, Current Balance : "+(dbbal-amount));
+							log.info("Account Id : "+accid+" trasfered money to account id "+thirdaccid+" , total balance is : "+(dbbal-amount));
 						 }
 						
-				case 5:	System.out.println("Trasaction Complete");
+				case 5:	log.info("Account Id : "+accid+" logged off.");
+						System.out.println("Trasaction Complete");
 						System.exit(0);
 				
 				default:System.out.println("Invalid Balance !!! ");
@@ -140,8 +147,10 @@ public class Bank_DB {
 		 
 		 try {
 			 if(uid.compareTo(dbuid)!=0 && pass.compareTo(dbpass)!=0) {
+				 	log.warn("Failed to login to account id : "+accid);
 					throw new UserException("Wrong Username or password try again");
 			}else {
+				log.info("Account Id : "+accid+" logged in.");
 				obj.trasaction(accid,con);
 			}
 		 }catch(Exception onee) {
@@ -151,8 +160,10 @@ public class Bank_DB {
 				 System.out.println("Enter Password : ");
 				 pass=sc.nextLine();
 				 if(uid.compareTo(dbuid)!=0 && pass.compareTo(dbpass)!=0) {
+					 	log.warn("Failed to login to account id : "+accid);
 						throw new UserException("Wrong Username or password try again");
 				}else {
+					log.info("Account Id : "+accid+" logged in.");
 					obj.trasaction(accid,con);
 				}
 			 }catch(Exception twoe) {
@@ -162,8 +173,10 @@ public class Bank_DB {
 					 System.out.println("Enter Password : ");
 					 pass=sc.nextLine();
 					 if(uid.compareTo(dbuid)!=0 && pass.compareTo(dbpass)!=0) {
+						 	log.warn("Failed to login to account id : "+accid);
 							throw new UserException("Wrong Username or password try again");
 					}else {
+						log.info("Account Id : "+accid+" logged in.");
 						obj.trasaction(accid,con);
 					}
 				 }catch(Exception threee) {
@@ -171,6 +184,7 @@ public class Bank_DB {
 				 }
 			 }
 		 }finally {
+			 log.info("Account Id : "+accid+" logged off.");
 			 System.out.println("Trasaction Complete");
 		 }
 	 }
